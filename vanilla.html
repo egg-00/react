@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Practice</title>
+  </head>
+  <body>
+    <span>total click : 0</span>
+    <input class="btn" type="button" value="click me!" />
+  </body>
+  <script defer>
+    const span = document.querySelector("span");
+    const btn = document.querySelector(".btn");
+
+    let count = 0;
+
+    function onMouseUp() {
+      console.log("onMouseUp");
+    }
+
+    function onClick() {
+      count = count + 1;
+      span.innerText = `total click : ${count}`;
+    }
+
+    span.addEventListener("mouseover", onMouseUp);
+    btn.addEventListener("click", onClick);
+  </script>
+</html>
